@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/circle.png">
+    <title>Contacts</title>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+          emailjs.init({
+            publicKey: "OgbwlMamhSCU-_3GY",
+            blockHeadless: true,
+            limitRate: {
+              // Set the limit rate for the application
+              id: 'app',
+              // Allow 1 request per 10s
+              throttle: 10000,
+            },
+          });
+        })();
+      </script>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul class="nav-ul">
+            <li class="nav-list"><a href="index.html" class="nav-links name-icon">MS</a></li>
+            <li class="nav-list"><a href="about.html" class="nav-links styling-about">About</a></li>
+            <li class="nav-list"><a href="projects.html" class="nav-links styling-projects">Projects</a></li>
+            <li class="nav-list"><a href="contacts.html" class="nav-links styling-contacts">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+            <div class='main-div'>
+              <h1 class='head-text'>Get in Touch</h1>
+              <form class='contact-form' id="contact-form">
+              <label for="from_name" class='name-label'>
+                Nome
+                <input type="text" id="from_name" name='from_name' class='input' placeholder='ex. John' required/>
+              </label>
+              <label for="email" class='email-label'>
+                Email
+                <input type="email" id="email_id" name='email_id' class='input' placeholder='ex. John@gmail.com' required/>
+              </label>
+              <label for="message" class='message-label'>
+                Scrivi il tuo messaggio
+                <textarea name='message' id="message" class='input' placeholder='How can I help you?...' required></textarea>
+              </label>
+              <button type="submit" class='btn' onclick="sendMail(event)">
+                Send a Message
+              </button>
+              </form>
+            </div>
+      </main>
+      <script type="module" src="./js/threejs-contacts.js"></script>
+      <script type="text/javascript" src="./js/emailJS.js"></script>
+  </body>
+</html>
