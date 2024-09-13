@@ -16,7 +16,7 @@ import {
     bootstrapcss,
     mysql,
     php
-} from "../img/icons/index";
+} from "../public/static/images/icons";
 
 export const skills = [
     {

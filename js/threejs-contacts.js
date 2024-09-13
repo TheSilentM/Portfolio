@@ -26,7 +26,7 @@ const geometry = new THREE.IcosahedronGeometry(4, 12);
 //adding a loader that load the planet texture
 const loader = new THREE.TextureLoader();
 //loading planet textures 
-const material = new THREE.MeshStandardMaterial({ map: loader.load('/img/moonmap4k.jpg')});
+const material = new THREE.MeshStandardMaterial({ map: loader.load('/static/images/moonmap4k.jpg')});
 const mesh = new THREE.Mesh(geometry, material);
 
 //adding mesh to the scene
