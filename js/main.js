@@ -52,7 +52,7 @@ function addStars() {
   scene.add(star);
 }
 
-//for every 200 places in the array, add a star in a random position
+
 Array(1000).fill().forEach(addStars);
 
 
